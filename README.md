@@ -1,6 +1,6 @@
-# Lex: A Minimalist Lexer Library in Zig
+# SZL-Lex: A Minimalist Lexer Library in Zig
 
-Lex is a helper library for writing simple lexers, primarily for config files.
+SZL-Lex is a helper library for writing simple lexers, primarily for config files.
 
 ## Example
 
