@@ -110,6 +110,11 @@ pub fn Lexer(comptime TokenType: type) type {
             };
         }
 
+        /// De-initialise lexer
+        pub fn deinit(lexer: *Lexer(TokenType)) void {
+            lexer.token_list.deinit(lexer.allocator);
+        }
+
         /// Scan the source code until the end, matching against the tokens in `token_kind_list` and calling the defined handlers when a match is found.
         /// `eof_token` will be appended to the lexer's `token_list`.
         pub fn scan_source(lexer: *Lexer(TokenType), token_kind_list: []const TokenKind(TokenType), eof_token: TokenType) void {
